@@ -1,0 +1,237 @@
+{
+  "Uuid": "a3bace15-a8f6-406a-b07e-0a8df903062e",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "DesignScript",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "f = open(r\"D:\\Training dynamo\\Code dynamo python\\HOC-CODE-DYNAMO-2024\\DisegnScrpt.py\", \"r\")\r\n\r\nOUT = f.read() ",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "61dcdcec904348b4bf49346363bc9adf",
+      "Inputs": [
+        {
+          "Id": "d3219b85916142bcb8425d8180d6302e",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1feb6c4e88f84089bc4c2ce440cd35a3",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "a279fa8795d94f90a2751de6fb17dda0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7612ef434cd442afbe722a115dd3d859",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonStringNode, PythonNodeModels",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "141c8f985a3d472f875abb7e5db98c4d",
+      "Inputs": [
+        {
+          "Id": "86b0bfa6cb3140e18c1e9aed47c229d0",
+          "Name": "script",
+          "Description": "Python script to run.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "311043ee90384850a927b4c27b504e8d",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5f8e7dfa85df4d0a97d9de98648250d9",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e84730ad8ee4420aa39a84eefdd5d5e5",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs a Python script from a string."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "1feb6c4e88f84089bc4c2ce440cd35a3",
+      "End": "86b0bfa6cb3140e18c1e9aed47c229d0",
+      "Id": "e03e2efd82c445e2bfcfbdcae5c3cc88",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7612ef434cd442afbe722a115dd3d859",
+      "End": "d3219b85916142bcb8425d8180d6302e",
+      "Id": "16132429cc784f65a291c75ae9077957",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.13",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "2.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.13.1.3887",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Python Script",
+        "ShowGeometry": true,
+        "Id": "61dcdcec904348b4bf49346363bc9adf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1470.2304527546314,
+        "Y": 409.86997907025318
+      },
+      {
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Id": "a279fa8795d94f90a2751de6fb17dda0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1167.0580111273198,
+        "Y": 497.52431537880381
+      },
+      {
+        "Name": "Python Script From String",
+        "ShowGeometry": true,
+        "Id": "141c8f985a3d472f875abb7e5db98c4d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1724.6584661259753,
+        "Y": 381.4415131741759
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "0602ac35c4534b788f2611385532aa2e",
+        "Title": "Design Script",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "61dcdcec904348b4bf49346363bc9adf",
+          "a279fa8795d94f90a2751de6fb17dda0",
+          "141c8f985a3d472f875abb7e5db98c4d"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1157.0580111273198,
+        "Top": 308.4415131741759,
+        "Width": 844.60045499865555,
+        "Height": 321.08280220462785,
+        "FontSize": 36.0,
+        "InitialTop": 381.4415131741759,
+        "InitialHeight": 278.08280220462791,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -589.85346989083484,
+    "Y": 202.06660084782516,
+    "Zoom": 0.59208447830483457
+  }
+}
